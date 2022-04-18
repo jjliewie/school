@@ -1,0 +1,157 @@
+SET num_people TO int(INPUT("How many people are auditioning? "))
+
+
+
+SET database TO {
+
+    "Jose": ["hi", "whats up", "i'm jose the legend", "I will kill you"], 
+
+    "Maria": ["Jose, no!", "He's my love", "I hate you"],
+
+    "Tony": ["I love you Maria", "Jose, I will kill you FOR harming Maria", "Maria! Don't die on me!"],
+
+    "Anita": ["Tony, love me instead!", "Jose, my brother, you have crossed the line", "Mom! I don't want to marry the prince!"],
+
+    "Mercedes": ["Thou is my only love", "I wish I had a mercedes", "Anita!"],
+
+    "Mr. Capone": ["Kill the girl", "My darling Anita", "Did you leave you brain someplace else?"],
+
+    "Romeo": ["Oh Juliet!!"],
+
+    "The Prince": ["Anita, will you marry me?", "How dare she pick that commoner Tony, over me, the prince?!"]
+
+}
+
+
+
+SET passed_actors TO []
+
+SET character_picked TO []
+
+
+
+WHILE num_people > 0:
+
+
+
+    SET name TO INPUT("what is the actor's name? ")
+
+
+
+    SET point TO 0
+
+    SET height TO float(INPUT("What is your height IN meters: "))
+
+    IF height >= 1.8:
+
+        point += 5
+
+    ELSEIF height < 1.4:
+
+        point -= 5
+
+    SET character TO INPUT("Which character are you auditioning for? ")
+
+    FOR line IN database[character]:
+
+        SET language TO INPUT("Is the dialogue correct? ")
+
+        IF language EQUALS "yes":
+
+            point += 1
+
+        ELSE:
+
+            point -= 1
+
+        
+
+        SET emotion TO INPUT("Is the emotion portrayed correct? ")
+
+        IF emotion EQUALS "yes":
+
+            point += 1
+
+        ELSE:
+
+            point -= 1
+
+
+
+        SET body TO INPUT("Is the actor's body language correct? ")
+
+        IF body EQUALS "yes":
+
+            point += 1
+
+        ELSE:
+
+            point -= 1
+
+    
+
+    SET in_costume TO INPUT("Is the actor IN the correct costume? ")
+
+
+
+    IF in_costume EQUALS "yes":
+
+        point += 2
+
+    
+
+    SET donate_bool TO INPUT("Did the actor donate money? ")
+
+    IF donate_bool EQUALS "yes":
+
+        SET amount TO int(INPUT("How much did the actor donate? (in millions) "))
+
+        IF amount > 100:
+
+            point += 10
+
+
+
+    SET chairman TO INPUT("Is the actor related to the chairman? ")
+
+    IF chairman EQUALS "yes":
+
+        point += 10
+
+    
+
+    SET can_sing TO INPUT("can the actor sing? ")
+
+    IF can_sing EQUALS "yes":
+
+        IF point > 0:
+
+            point *= 1.5
+
+        ELSE:
+
+            point += 10
+
+    
+
+    IF point > 20 and character not IN character_picked:
+
+        OUTPUT(f'{name}! you passed! Congratulations!')
+
+        passed_actors.append(name)
+
+        character_picked.appened(character)
+
+    ELSE:
+
+        OUTPUT(f'{name}, you failed.')
+
+    
+
+    num_people -= 1
+
+    
+
+OUTPUT(passed_actors)
+
+        

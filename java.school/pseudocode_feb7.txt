@@ -1,0 +1,33 @@
+NUM = INPUT "enter a number: "
+if NUM >= 30 then
+    OUTPUT "not an option"
+else if NUM >= 20 then
+    OUTPUT "green"
+else if NUM >= 10 then
+    OUTPUT "red"
+else if NUM >= 0 then
+    OUTPUT "blue"
+else
+    OUTPUT "not an option"
+end if 
+
+A = INPUT "Enter a number: "
+B = INPUT "Enter a number: "
+C = INPUT "Enter a number: "
+D = INPUT "Enter a number: "
+E = INPUT "Enter a number: "
+
+LIST = [A, B, C, D, E]
+
+MIN = Integer.MAX_VALUE
+MAX = Integer.MIN_VALUE
+
+LOOP for I in LIST 
+    if I < MIN then
+        MIN = I
+    if I > MAX then
+        MAX = I
+end LOOP
+
+OUTPUT "Max Value: " + MAX
+OUTPUT "Min Value: " + MIN
