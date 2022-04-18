@@ -2,10 +2,10 @@ package miniproject;
 
 public class A {
 
-    private int [] temperatures = new int[7];
+    private int [] temperatures;;
 
-    A(int [] temperatures){
-        this.temperatures = temperatures;
+    A(){
+        temperatures = new int[7];
     }
 
     int [] getTemperatures(){
