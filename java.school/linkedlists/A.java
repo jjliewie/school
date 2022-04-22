@@ -6,7 +6,7 @@ public class A {
 
     public static void main(String[] args) {
         
-        LinkedList<String> demo = new LinkedList<String>();
+        LinkedList<String> demo = new LinkedList<>();
 
         demo.add("hello");
         demo.add("sample");

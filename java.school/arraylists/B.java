@@ -6,7 +6,7 @@ public class B {
 
     public static void main(String[] args) {
 
-        ArrayList<Student>cs101 = new ArrayList<Student>();
+        ArrayList<Student>cs101 = new ArrayList<>();
 
         Student student1 = new Student(3.5, "Ken", 9);
         Student student2 = new Student(3.9, "Barbie", 11);
@@ -37,8 +37,6 @@ public class B {
             System.out.println("Grade: " + x.getGrade());
             idx ++;
         }
-
-        
 
     }
     
