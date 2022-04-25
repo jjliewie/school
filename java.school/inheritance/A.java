@@ -109,6 +109,10 @@ class Student extends Person {
         }
     }
 
+    boolean checkIfTakesCourse(String a){
+        return courses.contains(a);
+    }
+
     @Override void printIntroduction(){
         System.out.println("Hi! My name is " + super.getName() + " and I am in " + grade + "th grade. My gpa is currently a " + gpa + ".");
     }
