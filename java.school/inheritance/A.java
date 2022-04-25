@@ -25,7 +25,7 @@ public class A {
     
 }
 
-class Person{
+class Person {
 
     private String name;
     private int age;
@@ -66,7 +66,8 @@ class Person{
     }
 }
 
-class Student extends Person{
+class Student extends Person {
+
     private double gpa;
     private int grade;
     private ArrayList<String> courses;
