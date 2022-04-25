@@ -1,5 +1,4 @@
 package linkedlists;
-
 import java.util.LinkedList;
 
 public class A {
